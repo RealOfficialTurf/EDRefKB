@@ -1,7 +1,7 @@
 # EDRefKB
 
 An Elite Dangerous third-party tool that generates visual keyboard reference sheet from Elite Dangerous key bindings, all in one html page!
-
+![Screenshot of the tool in action](https://dl.dropboxusercontent.com/s/azwsp3o5e6zcrcy/EDRefKB-sample.png)
 
 ## How to use
 
