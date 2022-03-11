@@ -3,19 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	</meta>
-	<title>KBLG</title>
+	<title>EDRefKB</title>
 </head>
 
 <body>
-	<label for="bindfile">Paste the code here:</label><br></br>
+	<h1>EDRefKB!</h1>
+	<p>To locate your saved key binding configuration, go to "C:\Users\USERNAME_HERE\AppData\Local\Frontier Developments\Elite Dangerous\Options\Bindings". File should be named "Custom.3.0.binds" or "Custom.4.0.binds".</p>
+	<p>You can always save the generated reference sheet by right-clicking the sheet and click "Save image as..." to save it into your computer.</p>
+	<label>Put the key binding file in the input box here</label>
 	<input id="bindfile" type="file" required><br></br>
-	<select id="bindareasel">: {},"Ship Controls": {},: {},"On Foot Controls": {}
+	<label>Alternatively, you can try loading the default 4.0 keybinds by pressing this button</label>
+	<button id="binddef" onclick="updateWithDefaultValue()">Load default 4.0 keybinds</button><br></br>
+	<label>Select the kind of reference sheet that will be generated</label>
+	<select id="bindareasel">
 		<option value="General Controls">General Controls</option>
 		<option value="Ship Controls">Ship Controls</option>
 		<option value="SRV Controls">SRV Controls</option>
 		<option value="On Foot Controls">On Foot Controls</option>
-	</select>
+	</select><br></br>
+	<label>Result should appear below this text</label>
 	<canvas id="bindcvs" width="3674" height="1492"></canvas>
 </body>
 <script src="keys.js"></script>
+<script src="bindpresets.js"></script>
 <script src="index.js"></script>

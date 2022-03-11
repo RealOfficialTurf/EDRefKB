@@ -9,8 +9,6 @@ function readFile(f: File) {
 		};
 		reader.readAsText(f);
 	});
-
-
 }
 function readbindcfg(x: Document) {
 	console.log(x.documentElement);
@@ -72,13 +70,18 @@ function updateValue(e: Event) {
 		draw();
 	});
 }
+//For testing purposes, but this can be used for showing default keybinds....
+function updateWithDefaultValue(){
+	const a=new DOMParser();
+	keybinds=readbindcfg(a.parseFromString(bind_4_0_keyboardmouseonly,"text/xml"));
+	selectarea();
+	draw();
+}
 selection.addEventListener("change",updateCanvas);
 function updateCanvas(e: Event){
 	selectarea();
 	draw();
 }
-//(document.getElementById("bindcvs") as HTMLCanvasElement).addEventListener('load', draw) //doesn't seem to work
-
 function draw() {
 	const cctx=(document.getElementById("bindcvs") as HTMLCanvasElement).getContext("2d");
 	const width=cctx? cctx.canvas.width:0;
