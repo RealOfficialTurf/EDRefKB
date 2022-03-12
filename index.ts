@@ -1,5 +1,10 @@
 const scale=2;
-var keybinds={"General Controls": {},"Ship Controls": {},"SRV Controls": {},"On Foot Controls": {}};
+type Bind={
+	readonly action: string,
+	readonly key: String;
+};
+type AllAreas="General Controls"|"Ship Controls"|"SRV Controls"|"On Foot Controls";
+var keybinds: {[T in AllAreas]: Bind[]}={"General Controls": [],"Ship Controls": [],"SRV Controls": [],"On Foot Controls": []};
 function readFile(f: File) {
 	return new Promise((resolve: (value: string) => void,reject) => {
 		const reader=new FileReader();
@@ -13,40 +18,60 @@ function readFile(f: File) {
 function readbindcfg(x: Document) {
 	console.log(x.documentElement);
 	console.log(x.documentElement.children);
-	let keybinds={"General Controls": {},"Ship Controls": {},"SRV Controls": {},"On Foot Controls": {}};
+	let kbs: {[T in AllAreas]: Bind[]}={"General Controls": [],"Ship Controls": [],"SRV Controls": [],"On Foot Controls": []};
 	for(let i=0;i<x.documentElement.children.length;i++) {
 		//console.log(x.documentElement.children[i].tagName);
 		let y=x.documentElement.children[i];
 		if(y.firstElementChild&&y.children[0].tagName=="Primary"&&y.children[1].tagName=="Secondary") {
-			let action=actions[y.tagName]? actions[y.tagName].action as string:y.tagName;
-			let area=actions[y.tagName]? actions[y.tagName].area as string:"";
-			let key=y.children[0].attributes[1].nodeValue;
-			//console.log(action+": "+key);
-			if(key) {
-				switch(area) {
-					case "General Controls":
-					case "Ship Controls":
-					case "SRV Controls":
-					case "On Foot Controls":
-						if(!keybinds[area][key]) {
-							keybinds[area][key]=[];
-						}
-						keybinds[area][key].push(action);
-						break;
-					default:
+			let y1=y.children[0];
+			let y2=y.children[1];
+			let test=actions[y.tagName as AllActions];
+			let action=test? test.action:y.tagName;
+			let area=test? test.area:"";
+			let firstkey=y1.attributes[1].nodeValue as string;
+			let secondkey=y2.attributes[1].nodeValue as string;
+			if(y) {
+				//console.log(action+": "+key);
+				if(firstkey) {
+					switch(area) {
+						case "General Controls":
+						case "Ship Controls":
+						case "SRV Controls":
+						case "On Foot Controls":
+							kbs[area].push({action: action,key: firstkey});
+							break;
+						default:
+					}
+				}
+				if(secondkey) {
+					switch(area) {
+						case "General Controls":
+						case "Ship Controls":
+						case "SRV Controls":
+						case "On Foot Controls":
+							kbs[area].push({action: action,key: secondkey});
+							break;
+						default:
+					}
 				}
 			}
 		}
 	}
-	return keybinds;
+	return kbs;
 }
 const selection=(document.getElementById("bindareasel") as HTMLSelectElement);
 function selectarea() {
-	let selectedarea=selection.options[selection.selectedIndex].value;
-	for(let i in keyboard) {
-		let b=keyboard[i] as Button;
+	for(let i in keyboard){
+		keyboard[i].actions = [];
+	}
+	let selectedarea: AllAreas=selection.options[selection.selectedIndex].value as AllAreas;
+	for(let i=0;i<keybinds[selectedarea].length;i++) {
 		if(keybinds[selectedarea][i]) {
-			b.actions=keybinds[selectedarea][i] as string[];
+			let x=keybinds[selectedarea][i];
+			let y=keyboard[x.key as AllKeys];
+			if(y!==undefined) {
+				y.actions.push(x.action);
+			}
 		}
 	}
 	console.log(keyboard);
@@ -71,14 +96,14 @@ function updateValue(e: Event) {
 	});
 }
 //For testing purposes, but this can be used for showing default keybinds....
-function updateWithDefaultValue(){
+function updateWithDefaultValue() {
 	const a=new DOMParser();
 	keybinds=readbindcfg(a.parseFromString(bind_4_0_keyboardmouseonly,"text/xml"));
 	selectarea();
 	draw();
 }
 selection.addEventListener("change",updateCanvas);
-function updateCanvas(e: Event){
+function updateCanvas(e: Event) {
 	selectarea();
 	draw();
 }
