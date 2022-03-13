@@ -122,7 +122,7 @@ class Button {
 	readonly y: number;
 	readonly w: number;
 	readonly h: number;
-	actions: string[];
+	mappedactions: {action:string,modifiers:string[]}[];
 	drawkey(ctx: CanvasRenderingContext2D): void {
 		ctx.strokeRect(this.x,this.y,this.w,this.h);
 		ctx.font="bold 24px sans-serif";
@@ -130,8 +130,35 @@ class Button {
 		ctx.fillText(this.name,this.x+this.w-4,this.y+24);
 		ctx.textAlign="left";
 		ctx.font="12px sans-serif";
-		for(let i=0;i<this.actions.length;i++) {
-			ctx.fillText(this.actions[i],this.x+4,this.y+this.h-4-(12*(this.actions.length-1-i)));
+		for(let i=this.mappedactions.length-1;i>=0;i--) {
+			let x = this.x+4
+			let y = this.y+this.h-4-(12*(this.mappedactions.length-1-i))
+			//Sure, we could just do
+			//ctx.fillText(this.mappedactions[i].modifiers.join("")+this.mappedactions[i].action,x,y);
+			//But then we can't give font colors for the modifier...
+			ctx.fillStyle="red";
+			for(let j of this.mappedactions[i].modifiers){
+				switch(j){
+					case "Key_LeftControl":
+						j="LCtrl ";break;
+					case "Key_RightControl":
+						j="RCtrl ";break;
+					case "Key_LeftShift":
+						j="LShift ";break;
+					case "Key_RightShift":
+						j="RShift ";break;
+					case "Key_LeftAlt":
+						j="LAlt ";break;
+					case "Key_RightAlt":
+						j="RAlt ";break;
+					default:
+						j="UnknownModifier "
+				}
+				ctx.fillText(j,x,y);
+				x+=ctx.measureText(j).width;
+			}
+			ctx.fillStyle="black";
+			ctx.fillText(this.mappedactions[i].action,x,y);
 		}
 	}
 	constructor(name: string,x: number,y: number,w: number,h: number) {
@@ -140,7 +167,7 @@ class Button {
 		this.y=y;
 		this.w=w;
 		this.h=h;
-		this.actions=[];
+		this.mappedactions=[];
 	}
 };
 type AllKeys = "Key_Backspace"|"Key_Tab"|"Key_Enter"|"Key_Pause"|"Key_CapsLock"|"Key_Kana"|"Key_Kanji"|"Key_Escape"|"Key_Convert"|"Key_NoConvert"|"Key_Space"|"Key_PageUp"|"Key_PageDown"|"Key_End"|"Key_Home"|"Key_LeftArrow"|"Key_UpArrow"|"Key_RightArrow"|"Key_DownArrow"|"Key_SYSRQ"|"Key_Insert"|"Key_Delete"|"Key_0"|"Key_1"|"Key_2"|"Key_3"|"Key_4"|"Key_5"|"Key_6"|"Key_7"|"Key_8"|"Key_9"|"Key_A"|"Key_B"|"Key_C"|"Key_D"|"Key_E"|"Key_F"|"Key_G"|"Key_H"|"Key_I"|"Key_J"|"Key_K"|"Key_L"|"Key_M"|"Key_N"|"Key_O"|"Key_P"|"Key_Q"|"Key_R"|"Key_S"|"Key_T"|"Key_U"|"Key_V"|"Key_W"|"Key_X"|"Key_Y"|"Key_Z"|"Key_LeftWin"|"Key_RightWin"|"Key_Apps"|"Key_Sleep"|"Key_Numpad_0"|"Key_Numpad_1"|"Key_Numpad_2"|"Key_Numpad_3"|"Key_Numpad_4"|"Key_Numpad_5"|"Key_Numpad_6"|"Key_Numpad_7"|"Key_Numpad_8"|"Key_Numpad_9"|"Key_Numpad_Multiply"|"Key_Numpad_Add"|"Key_Numpad_Subtract"|"Key_Numpad_Decimal"|"Key_Numpad_Comma"|"Key_Numpad_Divide"|"Key_Numpad_Enter"|"Key_F1"|"Key_F2"|"Key_F3"|"Key_F4"|"Key_F5"|"Key_F6"|"Key_F7"|"Key_F8"|"Key_F9"|"Key_F10"|"Key_F11"|"Key_F12"|"Key_F13"|"Key_F14"|"Key_F15"|"Key_F16"|"Key_F17"|"Key_F18"|"Key_F19"|"Key_F20"|"Key_F21"|"Key_F22"|"Key_F23"|"Key_F24"|"Key_NumLock"|"Key_ScrollLock"|"Key_LeftShift"|"Key_RightShift"|"Key_LeftControl"|"Key_RightControl"|"Key_LeftAlt"|"Key_RightAlt"|"Key_WebBack"|"Key_WebForward"|"Key_WebRefresh"|"Key_WebStop"|"Key_WebSearch"|"Key_WebFavourites"|"Key_WebHome"|"Key_Mute"|"Key_VolumeDown"|"Key_VolumeUp"|"Key_NextTrack"|"Key_PrevTrack"|"Key_MediaStop"|"Key_Stop"|"Key_PlayPause"|"Key_Mail"|"Key_MediaSelect"|"Key_SemiColon"|"Key_Plus"|"Key_Equals"|"Key_Comma"|"Key_Minus"|"Key_Period"|"Key_Slash"|"Key_Grave"|"Key_LeftBracket"|"Key_BackSlash"|"Key_RightBracket"|"Key_Apostrophe"|"Key_OEM_102"|"Key_ä"|"Key_ö"|"Key_ü"|"Key_ß"|"Key_Acute"|"Key_LessThan"|"Key_Circumflex"|"Key_Hash"|"Key_Colon"|"Key_ABNT_C1"|"Key_Yen"|"Key_ABNT_C2"|"Key_Numpad_Equals"|"Key_Underline"|"Key_AX"|"Key_Unlabeled"|"Key_Calculator"|"Key_AT"|"Key_Power"|"Key_Wake"|"Key_MyComputer"|"Key_GreenModifier"|"Key_OrangeModifier";

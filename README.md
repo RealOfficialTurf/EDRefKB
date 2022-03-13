@@ -23,5 +23,5 @@ This is my first time of actually developing a real usable third-party tool for 
 
 ## Plans for the future
 
-- Colored text for actions with modifier keys
-- Better graphics
+- Fixing texts going out of bounds
+- Prettier keyboard layout
