@@ -5,9 +5,11 @@ An Elite Dangerous third-party tool that generates visual keyboard reference she
 
 ## How to use
 
-1. Check out the Release page on the sidebar to get the html page.
-2. Open `index.html` in your favorite browser to use.
+1. Head to the Release page on the sidebar to get the html file.
+2. Open the html file in your favorite browser to use.
 3. Follow the instructions in the opened page.
+
+Note: Make sure to use the file from the Release page and *not* from this page!
 
 The result will be an image that can saved and used freely.
 
