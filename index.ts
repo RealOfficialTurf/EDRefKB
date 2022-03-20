@@ -16,7 +16,6 @@ function readFile(f: File): Promise<string> {
 	});
 }
 function readbindcfg(x: Document): {"General Controls": Bind[]; "Ship Controls": Bind[]; "SRV Controls": Bind[]; "On Foot Controls": Bind[];} {
-	console.log(x.documentElement);
 	console.log(x.documentElement.children);
 	let kbs: {[T in AllAreas]: Bind[]}={"General Controls": [],"Ship Controls": [],"SRV Controls": [],"On Foot Controls": []};
 	for(let i of x.documentElement.children) {
@@ -103,7 +102,7 @@ function selectarea() {
 			let x=keybinds[selectedarea][i];
 			let y=keyboard[x.key as AllKeys];
 			if(y!==undefined) {
-				y.mappedactions.push({action:x.action,modifiers:x.modifiers});
+				y.mappedactions.push({action: x.action,modifiers: x.modifiers});
 			}
 		}
 	}
