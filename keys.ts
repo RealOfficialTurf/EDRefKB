@@ -424,7 +424,7 @@ const actions: ActionMap={
 	MicrophoneMute: {area: "Ship Controls",category: "Miscellaneous",action: "Microphone Mute"}, //Auto-generated
 	UseShieldCell: {area: "Ship Controls",category: "Miscellaneous",action: "Use Shield Cell"}, //Auto-generated
 	FireChaffLauncher: {area: "Ship Controls",category: "Miscellaneous",action: "Use Chaff Launcher"}, //Auto-generated
-	ChargeECM: {area: "Ship Controls",category: "Miscellaneous",action: "Charge Ecm"}, //Auto-generated
+	ChargeECM: {area: "Ship Controls",category: "Miscellaneous",action: "Charge ECM"}, //Auto-generated
 	WeaponColourToggle: {area: "Ship Controls",category: "Miscellaneous",action: "Weapon Color"}, //Auto-generated
 	EngineColourToggle: {area: "Ship Controls",category: "Miscellaneous",action: "Engine Color"}, //Auto-generated
 	NightVisionToggle: {area: "Ship Controls",category: "Miscellaneous",action: "Night Vision"}, //Auto-generated
@@ -535,22 +535,22 @@ const actions: ActionMap={
 	OrderHoldPosition: {area: "Ship Controls",category: "Fighter Orders",action: "Hold Position"}, //Auto-generated
 	OrderFollow: {area: "Ship Controls",category: "Fighter Orders",action: "Follow Me"}, //Auto-generated
 	OpenOrders: {area: "Ship Controls",category: "Fighter Orders",action: "Open Orders"}, //Auto-generated
-	PhotoCameraToggle: {area: "General Controls",category: "Camera Suite",action: "Ship - Toggle Camera Suite"}, //Auto-generated
-	PhotoCameraToggle_Buggy: {area: "General Controls",category: "Camera Suite",action: "SRV - Toggle Camera Suite"}, //Auto-generated
-	PhotoCameraToggle_Humanoid: {area: "General Controls",category: "Camera Suite",action: "Command - Toggle Camera Suite"}, //Auto-generated
-	VanityCameraScrollLeft: {area: "General Controls",category: "Camera Suite",action: "Previous Camera"}, //Auto-generated
-	VanityCameraScrollRight: {area: "General Controls",category: "Camera Suite",action: "Next Camera"}, //Auto-generated
-	ToggleFreeCam: {area: "General Controls",category: "Camera Suite",action: "Enter Free Camera"}, //Auto-generated
-	VanityCameraOne: {area: "General Controls",category: "Camera Suite",action: "Camera - Cockpit Front"}, //Auto-generated
-	VanityCameraTwo: {area: "General Controls",category: "Camera Suite",action: "Camera - Cockpit Back"}, //Auto-generated
-	VanityCameraThree: {area: "General Controls",category: "Camera Suite",action: "Camera - CMDR 1"}, //Auto-generated
-	VanityCameraFour: {area: "General Controls",category: "Camera Suite",action: "Camera - CMDR 2"}, //Auto-generated
-	VanityCameraFive: {area: "General Controls",category: "Camera Suite",action: "Camera - Co-Pilot 1"}, //Auto-generated
-	VanityCameraSix: {area: "General Controls",category: "Camera Suite",action: "Camera - Co-Pilot 2"}, //Auto-generated
-	VanityCameraSeven: {area: "General Controls",category: "Camera Suite",action: "Camera - Front"}, //Auto-generated
-	VanityCameraEight: {area: "General Controls",category: "Camera Suite",action: "Camera - Back"}, //Auto-generated
-	VanityCameraNine: {area: "General Controls",category: "Camera Suite",action: "Camera - Low"}, //Auto-generated
-	VanityCameraTen: {area: "General Controls",category: "...",action: "..."}, //Missing
+	PhotoCameraToggle: {area: "General Controls",category: "Camera Suite",action: "Ship - Toggle Camera Suite"},
+	PhotoCameraToggle_Buggy: {area: "General Controls",category: "Camera Suite",action: "SRV - Toggle Camera Suite"},
+	PhotoCameraToggle_Humanoid: {area: "General Controls",category: "Camera Suite",action: "Commander - Toggle Camera Suite"},
+	VanityCameraScrollLeft: {area: "General Controls",category: "Camera Suite",action: "Previous Camera"},
+	VanityCameraScrollRight: {area: "General Controls",category: "Camera Suite",action: "Next Camera"},
+	ToggleFreeCam: {area: "General Controls",category: "Camera Suite",action: "Enter Free Camera"},
+	VanityCameraOne: {area: "General Controls",category: "Camera Suite",action: "Camera - Cockpit Front"},
+	VanityCameraTwo: {area: "General Controls",category: "Camera Suite",action: "Camera - Cockpit Back"},
+	VanityCameraThree: {area: "General Controls",category: "Camera Suite",action: "Camera - CMDR 1"},
+	VanityCameraFour: {area: "General Controls",category: "Camera Suite",action: "Camera - CMDR 2"},
+	VanityCameraFive: {area: "General Controls",category: "Camera Suite",action: "Camera - Co-Pilot 1"},
+	VanityCameraSix: {area: "General Controls",category: "Camera Suite",action: "Camera - Co-Pilot 2"},
+	VanityCameraSeven: {area: "General Controls",category: "Camera Suite",action: "Camera - Co-Pilot 3"},
+	VanityCameraEight: {area: "General Controls",category: "Camera Suite",action: "Camera - Front"},
+	VanityCameraNine: {area: "General Controls",category: "Camera Suite",action: "Camera - Back"},
+	VanityCameraTen: {area: "General Controls",category: "Camera Suite",action: "Camera - Low"},
 	FreeCamToggleHUD: {area: "General Controls",category: "Free Camera",action: "Toggle HUD"}, //Auto-generated
 	FreeCamSpeedInc: {area: "General Controls",category: "Free Camera",action: "Increase Speed"}, //Auto-generated
 	FreeCamSpeedDec: {area: "General Controls",category: "Free Camera",action: "Decrease Speed"}, //Auto-generated
@@ -607,72 +607,72 @@ const actions: ActionMap={
 	SAAThirdPersonPitchDownButton: {area: "Ship Controls",category: "Detailed Surface Scanner",action: "Third-Person Pitch Down"}, //Auto-generated
 	SAAThirdPersonFovOutButton: {area: "Ship Controls",category: "Detailed Surface Scanner",action: "Third-Person Field of View Out"}, //Auto-generated
 	SAAThirdPersonFovInButton: {area: "Ship Controls",category: "Detailed Surface Scanner",action: "Third-Person Field of View In"}, //Auto-generated
-	HumanoidForwardButton: {area: "On Foot Controls",category: "On Foot",action: "Move Forward"}, //Auto-generated
-	HumanoidBackwardButton: {area: "On Foot Controls",category: "On Foot",action: "Move Backward"}, //Auto-generated
-	HumanoidStrafeLeftButton: {area: "On Foot Controls",category: "On Foot",action: "Strafe Left"}, //Auto-generated
-	HumanoidStrafeRightButton: {area: "On Foot Controls",category: "On Foot",action: "Strafe Right"}, //Auto-generated
-	HumanoidRotateLeftButton: {area: "On Foot Controls",category: "On Foot",action: "Turn Left"}, //Auto-generated
-	HumanoidRotateRightButton: {area: "On Foot Controls",category: "On Foot",action: "Turn Right"}, //Auto-generated
-	HumanoidPitchUpButton: {area: "On Foot Controls",category: "On Foot",action: "Look Up"}, //Auto-generated
-	HumanoidPitchDownButton: {area: "On Foot Controls",category: "On Foot",action: "Look Down"}, //Auto-generated
-	HumanoidSprintButton: {area: "On Foot Controls",category: "On Foot",action: "Sprint"}, //Auto-generated
-	HumanoidWalkButton: {area: "On Foot Controls",category: "On Foot",action: "Walk"}, //Auto-generated
-	HumanoidCrouchButton: {area: "On Foot Controls",category: "On Foot",action: "Crouch"}, //Auto-generated
-	HumanoidJumpButton: {area: "On Foot Controls",category: "On Foot",action: "Jump"}, //Auto-generated
-	HumanoidPrimaryInteractButton: {area: "On Foot Controls",category: "On Foot",action: "Interact"}, //Auto-generated
-	HumanoidSecondaryInteractButton: {area: "On Foot Controls",category: "On Foot",action: "Secondary Interact"}, //Auto-generated
-	HumanoidItemWheelButton: {area: "On Foot Controls",category: "On Foot",action: "Open Item Wheel"}, //Auto-generated
-	HumanoidEmoteWheelButton: {area: "On Foot Controls",category: "...",action: "..."}, //Missing
-	HumanoidUtilityWheelCycleMode: {area: "On Foot Controls",category: "...",action: "..."}, //Missing
-	HumanoidItemWheelButton_XLeft: {area: "On Foot Controls",category: "On Foot",action: "Item Wheel Left"}, //Auto-generated
-	HumanoidItemWheelButton_XRight: {area: "On Foot Controls",category: "On Foot",action: "Item Wheel Right"}, //Auto-generated
-	HumanoidItemWheelButton_YUp: {area: "On Foot Controls",category: "On Foot",action: "Item Wheel Up"}, //Auto-generated
-	HumanoidItemWheelButton_YDown: {area: "On Foot Controls",category: "On Foot",action: "Item Wheel Down"}, //Auto-generated
-	HumanoidPrimaryFireButton: {area: "On Foot Controls",category: "On Foot",action: "Fire Weapon/Use Tool"}, //Auto-generated
-	HumanoidZoomButton: {area: "On Foot Controls",category: "On Foot",action: "Aim Down Sights"}, //Auto-generated
-	HumanoidThrowGrenadeButton: {area: "On Foot Controls",category: "On Foot",action: "Throw Grenade"}, //Auto-generated
-	HumanoidMeleeButton: {area: "On Foot Controls",category: "On Foot",action: "Melee Attack"}, //Auto-generated
-	HumanoidReloadButton: {area: "On Foot Controls",category: "On Foot",action: "Reload"}, //Auto-generated
-	HumanoidSwitchWeapon: {area: "On Foot Controls",category: "On Foot",action: "Switch Weapon"}, //Auto-generated
-	HumanoidSelectPrimaryWeaponButton: {area: "On Foot Controls",category: "On Foot",action: "Select Primary Weapon"}, //Auto-generated
-	HumanoidSelectSecondaryWeaponButton: {area: "On Foot Controls",category: "On Foot",action: "Select Secondary Weapon"}, //Auto-generated
-	HumanoidSelectUtilityWeaponButton: {area: "On Foot Controls",category: "On Foot",action: "Select Tool"}, //Auto-generated
-	HumanoidSelectNextWeaponButton: {area: "On Foot Controls",category: "On Foot",action: "Select Next Weapon"}, //Auto-generated
-	HumanoidSelectPreviousWeaponButton: {area: "On Foot Controls",category: "On Foot",action: "Select Previous Weapon"}, //Auto-generated
-	HumanoidHideWeaponButton: {area: "On Foot Controls",category: "On Foot",action: "Holster Weapon"}, //Auto-generated
-	HumanoidSelectNextGrenadeTypeButton: {area: "On Foot Controls",category: "On Foot",action: "Select Next Grenade Type"}, //Auto-generated
-	HumanoidSelectPreviousGrenadeTypeButton: {area: "On Foot Controls",category: "On Foot",action: "Select Previous Grenade Type"}, //Auto-generated
-	HumanoidToggleFlashlightButton: {area: "On Foot Controls",category: "On Foot",action: "Toggle Flashlight"}, //Auto-generated
-	HumanoidToggleNightVisionButton: {area: "On Foot Controls",category: "On Foot",action: "Toggle Night Vision"}, //Auto-generated
-	HumanoidToggleShieldsButton: {area: "On Foot Controls",category: "On Foot",action: "Toggle Shields"}, //Auto-generated
-	HumanoidClearAuthorityLevel: {area: "On Foot Controls",category: "On Foot",action: "Clear Authority Level"}, //Auto-generated
-	HumanoidHealthPack: {area: "On Foot Controls",category: "On Foot",action: "Use Health Pack"}, //Auto-generated
-	HumanoidBattery: {area: "On Foot Controls",category: "On Foot",action: "Use Energy Cell"}, //Auto-generated
-	HumanoidSelectFragGrenade: {area: "On Foot Controls",category: "On Foot",action: "Select Frag Grenade"}, //Auto-generated
-	HumanoidSelectEMPGrenade: {area: "On Foot Controls",category: "On Foot",action: "Select EMP Grenade"}, //Auto-generated
-	HumanoidSelectShieldGrenade: {area: "On Foot Controls",category: "On Foot",action: "Select Shield Grenade"}, //Auto-generated
-	HumanoidSwitchToRechargeTool: {area: "On Foot Controls",category: "On Foot",action: "Select Energylink"}, //Auto-generated
-	HumanoidSwitchToCompAnalyser: {area: "On Foot Controls",category: "On Foot",action: "Select Profile Analyser"}, //Auto-generated
-	HumanoidSwitchToSuitTool: {area: "On Foot Controls",category: "On Foot",action: "Select Suit Specific Tool"}, //Auto-generated
-	HumanoidToggleToolModeButton: {area: "On Foot Controls",category: "On Foot",action: "Toggle Tool Mode"}, //Auto-generated
-	HumanoidToggleMissionHelpPanelButton: {area: "On Foot Controls",category: "On Foot",action: "Toggle Help"}, //Auto-generated
-	HumanoidPing: {area: "On Foot Controls",category: "...",action: "..."}, //Missing
-	GalaxyMapOpen_Humanoid: {area: "On Foot Controls",category: "On Foot Mode Switches",action: "Open Galaxy Map"}, //Auto-generated
-	SystemMapOpen_Humanoid: {area: "On Foot Controls",category: "On Foot Mode Switches",action: "Open System Map"}, //Auto-generated
-	FocusCommsPanel_Humanoid: {area: "On Foot Controls",category: "On Foot Mode Switches",action: "Comms Panel"}, //Auto-generated
-	QuickCommsPanel_Humanoid: {area: "On Foot Controls",category: "On Foot Mode Switches",action: "Quick Comms"}, //Auto-generated
-	HumanoidOpenAccessPanelButton: {area: "On Foot Controls",category: "On Foot Mode Switches",action: "Open Insight Hub"}, //Auto-generated
-	HumanoidConflictContextualUIButton: {area: "On Foot Controls",category: "On Foot Mode Switches",action: "Open Conflict Zone Battle Stats"}, //Auto-generated
+	HumanoidForwardButton: {area: "On Foot Controls",category: "On Foot",action: "Move Forward"},
+	HumanoidBackwardButton: {area: "On Foot Controls",category: "On Foot",action: "Move Backward"},
+	HumanoidStrafeLeftButton: {area: "On Foot Controls",category: "On Foot",action: "Strafe Left"},
+	HumanoidStrafeRightButton: {area: "On Foot Controls",category: "On Foot",action: "Strafe Right"},
+	HumanoidRotateLeftButton: {area: "On Foot Controls",category: "On Foot",action: "Turn Left"},
+	HumanoidRotateRightButton: {area: "On Foot Controls",category: "On Foot",action: "Turn Right"},
+	HumanoidPitchUpButton: {area: "On Foot Controls",category: "On Foot",action: "Look Up"},
+	HumanoidPitchDownButton: {area: "On Foot Controls",category: "On Foot",action: "Look Down"},
+	HumanoidSprintButton: {area: "On Foot Controls",category: "On Foot",action: "Sprint"}, //Button mode
+	HumanoidWalkButton: {area: "On Foot Controls",category: "On Foot",action: "Walk"}, //Button mode
+	HumanoidCrouchButton: {area: "On Foot Controls",category: "On Foot",action: "Crouch"}, //Button mode
+	HumanoidJumpButton: {area: "On Foot Controls",category: "On Foot",action: "Jump"},
+	HumanoidPrimaryInteractButton: {area: "On Foot Controls",category: "On Foot",action: "Interact"},
+	HumanoidSecondaryInteractButton: {area: "On Foot Controls",category: "On Foot",action: "Secondary Interact"},
+	HumanoidItemWheelButton: {area: "On Foot Controls",category: "On Foot",action: "Open Item Wheel"}, //Button mode
+	HumanoidEmoteWheelButton: {area: "On Foot Controls",category: "On Foot",action: "Open Emote Wheel"}, //Button mode
+	HumanoidUtilityWheelCycleMode: {area: "On Foot Controls",category: "On Foot",action: "Cycle Utility Wheel Mode"},
+	HumanoidItemWheelButton_XLeft: {area: "On Foot Controls",category: "On Foot",action: "Wheel Left"},
+	HumanoidItemWheelButton_XRight: {area: "On Foot Controls",category: "On Foot",action: "Wheel Right"},
+	HumanoidItemWheelButton_YUp: {area: "On Foot Controls",category: "On Foot",action: "Wheel Up"},
+	HumanoidItemWheelButton_YDown: {area: "On Foot Controls",category: "On Foot",action: "Wheel Down"},
+	HumanoidPrimaryFireButton: {area: "On Foot Controls",category: "On Foot",action: "Fire Weapon/Use Tool"},
+	HumanoidZoomButton: {area: "On Foot Controls",category: "On Foot",action: "Aim Down Sights"}, //Button mode
+	HumanoidThrowGrenadeButton: {area: "On Foot Controls",category: "On Foot",action: "Throw Grenade"},
+	HumanoidMeleeButton: {area: "On Foot Controls",category: "On Foot",action: "Melee Attack"},
+	HumanoidReloadButton: {area: "On Foot Controls",category: "On Foot",action: "Reload"},
+	HumanoidSwitchWeapon: {area: "On Foot Controls",category: "On Foot",action: "Switch Weapon"},
+	HumanoidSelectPrimaryWeaponButton: {area: "On Foot Controls",category: "On Foot",action: "Select Primary Weapon"},
+	HumanoidSelectSecondaryWeaponButton: {area: "On Foot Controls",category: "On Foot",action: "Select Secondary Weapon"},
+	HumanoidSelectUtilityWeaponButton: {area: "On Foot Controls",category: "On Foot",action: "Select Tool"},
+	HumanoidSelectNextWeaponButton: {area: "On Foot Controls",category: "On Foot",action: "Select Next Weapon"},
+	HumanoidSelectPreviousWeaponButton: {area: "On Foot Controls",category: "On Foot",action: "Select Previous Weapon"},
+	HumanoidHideWeaponButton: {area: "On Foot Controls",category: "On Foot",action: "Holster Weapon"},
+	HumanoidSelectNextGrenadeTypeButton: {area: "On Foot Controls",category: "On Foot",action: "Select Next Grenade Type"},
+	HumanoidSelectPreviousGrenadeTypeButton: {area: "On Foot Controls",category: "On Foot",action: "Select Previous Grenade Type"},
+	HumanoidToggleFlashlightButton: {area: "On Foot Controls",category: "On Foot",action: "Toggle Flashlight"},
+	HumanoidToggleNightVisionButton: {area: "On Foot Controls",category: "On Foot",action: "Toggle Night Vision"},
+	HumanoidToggleShieldsButton: {area: "On Foot Controls",category: "On Foot",action: "Toggle Shields"},
+	HumanoidClearAuthorityLevel: {area: "On Foot Controls",category: "On Foot",action: "Clear Authority Level"},
+	HumanoidHealthPack: {area: "On Foot Controls",category: "On Foot",action: "Use Health Pack"},
+	HumanoidBattery: {area: "On Foot Controls",category: "On Foot",action: "Use Energy Cell"},
+	HumanoidSelectFragGrenade: {area: "On Foot Controls",category: "On Foot",action: "Select Frag Grenade"},
+	HumanoidSelectEMPGrenade: {area: "On Foot Controls",category: "On Foot",action: "Select EMP Grenade"},
+	HumanoidSelectShieldGrenade: {area: "On Foot Controls",category: "On Foot",action: "Select Shield Grenade"},
+	HumanoidSwitchToRechargeTool: {area: "On Foot Controls",category: "On Foot",action: "Select Energylink"},
+	HumanoidSwitchToCompAnalyser: {area: "On Foot Controls",category: "On Foot",action: "Select Profile Analyser"},
+	HumanoidSwitchToSuitTool: {area: "On Foot Controls",category: "On Foot",action: "Select Suit Specific Tool"},
+	HumanoidToggleToolModeButton: {area: "On Foot Controls",category: "On Foot",action: "Toggle Tool Mode"},
+	HumanoidToggleMissionHelpPanelButton: {area: "On Foot Controls",category: "On Foot",action: "Toggle Help"},
+	HumanoidPing: {area: "On Foot Controls",category: "......",action: "......"}, //Unused
+	GalaxyMapOpen_Humanoid: {area: "On Foot Controls",category: "On Foot Mode Switches",action: "Open Galaxy Map"},
+	SystemMapOpen_Humanoid: {area: "On Foot Controls",category: "On Foot Mode Switches",action: "Open System Map"},
+	FocusCommsPanel_Humanoid: {area: "On Foot Controls",category: "On Foot Mode Switches",action: "Comms Panel"},
+	QuickCommsPanel_Humanoid: {area: "On Foot Controls",category: "On Foot Mode Switches",action: "Quick Comms"},
+	HumanoidOpenAccessPanelButton: {area: "On Foot Controls",category: "On Foot Mode Switches",action: "Open Insight Hub"},
+	HumanoidConflictContextualUIButton: {area: "On Foot Controls",category: "On Foot Mode Switches",action: "Open Conflict Zone Battle Stats"},
 	StoreEnableRotation: {area: "General Controls",category: "Store Camera",action: "Hold to Rotate"}, //Auto-generated
 	StoreCamZoomIn: {area: "General Controls",category: "Store Camera",action: "Store Camera Zoom In"}, //Auto-generated
 	StoreCamZoomOut: {area: "General Controls",category: "Store Camera",action: "Store Camera Zoom Out"}, //Auto-generated
 	StoreToggle: {area: "General Controls",category: "Store Camera",action: "Store Toggle"}, //Auto-generated
-	HumanoidEmoteSlot1: {area: "On Foot Controls",category: "...",action: "..."}, //Missing
-	HumanoidEmoteSlot2: {area: "On Foot Controls",category: "...",action: "..."}, //Missing
-	HumanoidEmoteSlot3: {area: "On Foot Controls",category: "...",action: "..."}, //Missing
-	HumanoidEmoteSlot4: {area: "On Foot Controls",category: "...",action: "..."}, //Missing
-	HumanoidEmoteSlot5: {area: "On Foot Controls",category: "...",action: "..."}, //Missing
-	HumanoidEmoteSlot6: {area: "On Foot Controls",category: "...",action: "..."}, //Missing
-	HumanoidEmoteSlot7: {area: "On Foot Controls",category: "...",action: "..."}, //Missing
-	HumanoidEmoteSlot8: {area: "On Foot Controls",category: "...",action: "..."} //Missing
+	HumanoidEmoteSlot1: {area: "On Foot Controls",category: "On Foot Emotes",action: "Point"},
+	HumanoidEmoteSlot2: {area: "On Foot Controls",category: "On Foot Emotes",action: "Wave"},
+	HumanoidEmoteSlot3: {area: "On Foot Controls",category: "On Foot Emotes",action: "Agree"},
+	HumanoidEmoteSlot4: {area: "On Foot Controls",category: "On Foot Emotes",action: "Disagree"},
+	HumanoidEmoteSlot5: {area: "On Foot Controls",category: "On Foot Emotes",action: "Go"},
+	HumanoidEmoteSlot6: {area: "On Foot Controls",category: "On Foot Emotes",action: "Stop"},
+	HumanoidEmoteSlot7: {area: "On Foot Controls",category: "On Foot Emotes",action: "Applaud"},
+	HumanoidEmoteSlot8: {area: "On Foot Controls",category: "On Foot Emotes",action: "Salute"}
 };
